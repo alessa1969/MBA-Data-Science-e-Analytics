@@ -662,7 +662,7 @@ médias <- function(x) {
   media <- mean(x, na.rm = T)
   return(media)
 }
-
+#Necessário criar a nova_base antes
 médias(nova_base$tempo)
 médias(nova_base$distancia)
 médias(nova_base$semaforos)
@@ -699,6 +699,8 @@ percentil_var(nova_base$semaforos)
 # map_dbl(): doubles
 # map_chr(): caracteres 
 
+?map
+
 # A seguir, vamos criar o vetor que contém os inputs para o map()
 # Para a nova_base, vamos selecionar as variáveis numéricas:
 
@@ -709,11 +711,13 @@ vetor_input <- c("tempo", "distancia", "semaforos")
 # A seguir, cada linha gera um tipo de estatística para cada variável do vetor
 # A tarefa que realizamos em 3 linhas antes, é realizada em uma linha agora
 
+map_dbl(nova_base, mean, na.rm = T)
 map_dbl(nova_base[vetor_input], mean, na.rm = T)
 map_dbl(nova_base[vetor_input], median, na.rm = T)
 map_dbl(nova_base[vetor_input], sd, na.rm = T)
 map(nova_base[vetor_input], quantile, probs=c(0.25, 0.50, 0.75), type=5, na.rm = T)
-
+map(nova_base, 10)
+head(nova_base, 10)
 # Nos caso os percentis, utilizamos apenas o map, pois é gerada uma lista
 # A justificativa é que pedimos 3 informações no mesmo código
 
