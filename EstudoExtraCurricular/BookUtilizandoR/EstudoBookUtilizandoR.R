@@ -51,7 +51,7 @@ Nota.aluno2
 
 # Tabela de dados
 
-# Criamos uma tebal de nome notas contendo
+# Criamos uma tebela de nome notas contendo
 
 # as notas dos dois alunos em cada coluna
 notas = data.frame(Nota.aluno1, Nota.aluno2)
@@ -116,4 +116,59 @@ notas$Nota.aluno2
 # x=[1,2,2] y=[1/2, 1.1] z=[1/2, 1.1]
 # dada a matriz do livro com x na coluna 1, y na coluna 2 e z na coluna 3
 
+x <- c(1, 2, 2)
+y <- c(1/2, 1, 1)
+z<- c(1/2, 1, 1)
+M =  cbind(x, y, z)
+M
 
+# 2. Calcule a média e a mediana de x
+mean(x)
+median(x)
+
+# 3. Calcule a correlação entre x e seu vetor de soma acumulada
+cor(x, cumsum(x))
+
+# 4. Obtenha as dimensões da matriz M
+dim(M)
+
+# 5. Obtenha os autovalores e autovetores da matriz M
+eigen(M)
+
+# 6. Obtenha o piso e teto do valor 8.799.
+floor(8.799)
+ceiling(8.799)
+
+# 7. Arredonde o valor 8.799 para uma casa decimal
+round(8.799, 1)
+
+# 8. Encontre as raízes do polinômio x^2 - 9
+
+polyroot(c(-9, 0, 1) )
+
+Re(polyroot(c(-9, 0,1)))
+
+# 9. Retorne as diferenças entre os elementos consecutivos do vetor x
+diff(x)
+
+# 10. Obtenha o vetor de somas acumuladas do vetor z, o vetor do produto acumulado do vetor y e o vetor do valor máximo acumulado do vetor x
+cumsum(z)
+cumprod(y)
+cummax(x)
+
+# 11. Obtenha o desvio-padrão e a variância de x.
+sd(x)
+var(x)
+
+# 12. Crie a matriz H e obtenha a média dos elementos de cada linha usando a função apply(H, i=2, mean).
+H = cbind(c(0, 4, 3), c(8, 1, 5), c(3, 0, 1))
+H
+apply(H, 2, mean)
+
+# 13. Crie os seguintes vetores:
+X = c(3, 8, 1, 2.5)
+Y = c(8, 0, 2)
+
+# Obtenha o resultado da união e da intersecção entre X e Y.
+union(X, Y)
+intersect(X, Y)
