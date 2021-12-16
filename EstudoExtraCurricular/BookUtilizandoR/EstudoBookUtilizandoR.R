@@ -172,3 +172,48 @@ Y = c(8, 0, 2)
 # Obtenha o resultado da união e da intersecção entre X e Y.
 union(X, Y)
 intersect(X, Y)
+
+# Capítulo 3: Pacotes que facilitam a sua vida #
+search()
+install.packages(c("Rmakdown", "Knitr", "data.table",
+                   "tidyverse"), dependencies = TRUE)
+
+# Exercícios de fixação para o aprendizado
+
+# 1. Relize a instalação do pacote tideverse (ja foi instaldo na ação anterior)
+
+# 2. Realize a instalação do pacote janitor
+install.packages("janitor")
+
+# 3. Realize a a instalação do pacote R Markdown (já foi realização em ação anterior)
+
+# 4. Instale o pacote devtool e utilize-o em seguida para instalar o pacote readr diretamente do github.
+install.packages("devtools")
+library("devtools")
+search()
+devtools::install_github("tidyverse/readr")
+
+# 5. Carregue o pacote ggplot2 utilizando as duas possibilidades de comandos disponíveis no R
+library("ggplot2")
+?ggplot2
+
+
+# 6. Carregue todos os pacotes tyverse
+library("tidyverse")
+
+# 7. Procure por ajuda do pacote dplyr sobre as funções summarize e summarise
+?summarise
+?summarize
+
+# 8. Consulte a documentação do pacote base
+? base
+library(help = "base") # Abre a documentação de todo o pacote)
+
+# 9. Consulte um dos modos de executar R online e realize o comando : matriz=cbind(x=1:5, x2=(1:5)^2, x3=(1:5)^3); matriz
+matriz=cbind(x=1:5, x2=(1:5)^2, x3=(1:5)^3)
+matriz
+# Executado no Jupyter 
+
+
+# Capítulo 4 : Produzindo relatórios com o R Markdown
+
